@@ -3,7 +3,7 @@ module.exports = {
     host: 'localhost',
     username: 'root',
     password: '',
-    database: 'sqlnode',
+    database: 'event',
     define: {
         timestamps: true,
         undescored: true
