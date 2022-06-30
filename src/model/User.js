@@ -10,6 +10,10 @@ class User extends Model{
       sequelize
     })
   }
+
+  static associate(models){
+    this.hasMany(models.Event, {foreingKey: 'user_id', as: 'events'})
+  }
 }
 
 module.exports = User
