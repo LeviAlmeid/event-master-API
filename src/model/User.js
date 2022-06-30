@@ -11,8 +11,8 @@ class User extends Model{
     })
   }
 
-  static associate(models){
-    this.hasMany(models.Event, {foreingKey: 'user_id', as: 'events'})
+  static associate(models) {
+    this.hasMany(models.Event, {foreignKey: 'user_id', as: 'events'})
   }
 }
 
