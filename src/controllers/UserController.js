@@ -6,6 +6,16 @@ module.exports = {
 
     return res.json(users);
   },
+  async auth(req, res) {
+    const {email, password} = req.body;
+    const user = await User.findAll({where: {email, password}});
+
+    if(user == ''){
+      return res.json({error: "erraoo"})
+    }
+
+    return res.json(user);
+  },
 
   async store(req, res) {
     const { name, email, password } = req.body;
